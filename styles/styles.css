@@ -199,9 +199,20 @@ body{
 }
 
 .done-color{
-    color: black
+    color: maroon;
 }
 
+.filter-btn :hover, .progress:hover{
+    cursor: pointer;
+}
+
+.align-right{
+    justify-content: flex-end;
+}
+
+.disabled{
+    background: rgb(243, 205, 205);
+}
 
 
 
