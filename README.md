@@ -39,6 +39,17 @@ be able to see all three task groups at the same time.
     * Users should be able to edit a task at any time. This will allow them to correct typos, or
       add more detail without creating a new tasks and having to move it through statuses.
 
+### Challenge Features
+
+attempt these only after the required features have been finished
+
+1. Create a way to group sub-tasks under one parent task. When all of the sub-tasks are completed
+   the user should then be able to mark the top-level (parent) task as complete.
+2. Figure out how to store your TODO list application state using the browser's Local Storage API. Now see
+   if you can persist the state of the todo app between refreshes of the page.
+
+   > Reference: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
 ## Finished
 
 Create a pull request from your `submission` branch back to this repository.
