@@ -61,6 +61,8 @@ $(document).ready(function() {
           $(this).next().next().children().first().addClass('hidden');
           $(this).next().next().children().first().next().next().addClass('hidden');
            console.log($(this).next().next().addClass('align-right'))
+       
+
             })
 
         $('.title').on('click', function(){
@@ -82,6 +84,13 @@ $(document).ready(function() {
            $(this).prev().removeClass('in-progress')
            $(this).prev().text('To Do')
            $(this).prev().addClass('new')
+           if($(this).parent().prev().prev().hasClass('done-color')){
+            $(this).parent().prev().prev().removeClass('done-color')
+            $(this).parent().prev().removeClass('done-text')
+            $(this).prev().removeClass('hidden')
+            $(this).parent().removeClass('align-right')
+            
+           }
         })
 
 
@@ -118,10 +127,9 @@ $(document).ready(function() {
         $('.filter-all').removeClass('selected');
         $('.filter-done').removeClass('selected');
         $('.filter-prog').addClass('selected');
-        if($('.progress').hasClass('in-progress')){
-            $('.new').parent().parent().parent().addClass('hidden');
-            // $('.progress').removeClass('new')
-        }
+        $('.progress:not(".in-progress")').parent().parent().parent().addClass('hidden');
+         
+    
     })
 
     $('.filter-done').on('click', function(){

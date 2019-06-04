@@ -163,7 +163,7 @@ body{
 
 .icon-wrap{
     /* border: 1px solid black; */
-    width: 40%;
+    width: 43%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -222,6 +222,12 @@ body{
 
 .edittxt :focus{
     border: none;
+}
+
+.list-content .title :hover{
+    background-color: #F1F2E9;
+    cursor: text;
+    color: white
 }
 
 
