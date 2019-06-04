@@ -61,7 +61,6 @@ $(document).ready(function() {
           $(this).next().next().children().first().addClass('hidden');
           $(this).next().next().children().first().next().next().addClass('hidden');
            console.log($(this).next().next().addClass('align-right'))
-       
 
             })
 
@@ -78,6 +77,14 @@ $(document).ready(function() {
 
         $('.text-content').val('')
         $('button').addClass('disabled')
+        
+        // if($('.filter-prog').hasClass('selected')){
+        //     $('.filter-prog').removeClass('selected')
+        //     $('.filter-all').addClass('selected')
+        //     $('.filter-all').click()
+        // }
+    
+
         
         
         $('.fa-undo').on('click', function(){
@@ -113,30 +120,40 @@ $(document).ready(function() {
     
     //Filter
     $('.filter-all').on('click', function(){
-        $('.filter-done').removeClass('selected');
-        $('.filter-prog').removeClass('selected');
-        $('.filter-all').addClass('selected')
+        // $('.filter-done').removeClass('selected');
+        // $('.filter-prog').removeClass('selected');
+        // $('.filter-all').addClass('selected')
         if($('.progress').hasClass('in-progress')){
             $('.new').parent().parent().parent().removeClass('hidden');
             // $('.progress').removeClass('new')
         }
         $('.title:not(".done-text")').parent().parent().removeClass('hidden')
+        
+        $('.new-container').removeClass('hidden')
     })
 
     $('.filter-prog').on('click', function(){
-        $('.filter-all').removeClass('selected');
-        $('.filter-done').removeClass('selected');
-        $('.filter-prog').addClass('selected');
+        // $('.filter-all').removeClass('selected');
+        // $('.filter-done').removeClass('selected');
+        // $('.filter-prog').addClass('selected');
+       
+        $('.filter-all').click()
+        // $('.filter-prog').click()
         $('.progress:not(".in-progress")').parent().parent().parent().addClass('hidden');
-         
+        // $('.fa-circle').hasClass('done-color').parent().parent().addClass('hidden')
+        $('.new-container').addClass('hidden')
     
     })
 
     $('.filter-done').on('click', function(){
-        $('.filter-all').removeClass('selected');
-        $('.filter-prog').removeClass('selected');
-        $('.filter-done').addClass('selected')
+        // $('.filter-all').removeClass('selected');
+        // $('.filter-prog').removeClass('selected');
+        // $('.filter-done').addClass('selected')
+        $('.filter-all').click()
         $('.title:not(".done-text")').parent().parent().addClass('hidden')
+       
+        $('.new-container').addClass('hidden')
+        
 
     })
 

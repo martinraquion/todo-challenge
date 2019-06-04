@@ -52,17 +52,17 @@ body{
 }
 
 .filter-all{
-    background: white;
+    background: darkcyan;
     padding: 5px;
 }
 
 .filter-prog{
-    background: white;
+    background: green;
     padding: 5px;
 }
 
 .filter-done{
-    background: white;
+    background: lightsalmon;
     padding: 5px;
 }
 
@@ -163,13 +163,17 @@ body{
 
 .icon-wrap{
     /* border: 1px solid black; */
-    width: 43%;
+    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
+
+.icon-wrap * {
+    margin-left: 10px;
+}
 .title{
-    width: 50%;
+    width: 30%;
     overflow: hidden;
 }
 .progress{
@@ -230,6 +234,27 @@ body{
     color: white
 }
 
+
+.no-res-done{
+    align-self: center;
+    color: gray;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.no-res-prog{
+    align-self: center;
+    color: gray;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.no-res-all{
+    align-self: center;
+    color: gray;
+    font-style: italic;
+    margin-top: 20px;
+}
 
 
 
