@@ -214,6 +214,16 @@ body{
     background: rgb(243, 205, 205);
 }
 
+.edittxt{
+    background: rgb(255, 194, 194);
+    color: black;
+    padding: 5px;
+}
+
+.edittxt :focus{
+    border: none;
+}
+
 
 
 
